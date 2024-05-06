@@ -24,7 +24,7 @@ func main() {
 		return
 	}
 	fmt.Println("Connected to database!")
-	targetID := "mock-id-1"
+	targetID := "inventory-id-1"
 	ctx := context.Background()
 	delay := 0
 	if len(os.Args) > 1 {
@@ -50,7 +50,8 @@ func performUpdate(ctx context.Context, db *sql.DB, targetID string, incrVal int
 	// check if the version is same
 	if inventoryItem.Version != currentVersion {
 		fmt.Println("Version mismatch")
-		return err
+		newErr := fmt.Errorf("failed to update inventory item, version mismatch")
+		return newErr
 	}
 
 	// simulate delay
@@ -71,7 +72,7 @@ func performUpdate(ctx context.Context, db *sql.DB, targetID string, incrVal int
 	fmt.Println("updateCount", updateCount)
 	if updateCount == 0 {
 		fmt.Println("Failed to update inventory item")
-		newErr := fmt.Errorf("Failed to update inventory item")
+		newErr := fmt.Errorf("failed to update inventory item")
 		return newErr
 
 	}

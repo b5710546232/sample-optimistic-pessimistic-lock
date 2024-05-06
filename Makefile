@@ -1,5 +1,5 @@
 include .env
-STEP = 1
+STEP = 3
 
 sql-gen:
 	sqlboiler psql -c sqlboiler.toml

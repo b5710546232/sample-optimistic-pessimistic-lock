@@ -1,2 +1,2 @@
-DELETE FROM inventory WHERE id = 'mock-id-1';
-DELETE FROM inventory WHERE id = 'mock-id-2';
+DELETE FROM inventory WHERE id = 'inventory-id-1';
+DELETE FROM inventory WHERE id = 'inventory-id-2';

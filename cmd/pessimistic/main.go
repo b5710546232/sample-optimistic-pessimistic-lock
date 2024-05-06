@@ -42,7 +42,7 @@ func main() {
 		fmt.Println("inventory-->", inventory.ID, inventory.Name, inventory.Amount)
 	}
 	fmt.Print("\n")
-	targetID := "mock-id-1"
+	targetID := "inventory-id-1"
 	delay := 0
 	if len(os.Args) > 1 {
 		delayStr := os.Args[1]
