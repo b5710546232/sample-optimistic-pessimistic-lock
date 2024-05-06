@@ -1,4 +1,4 @@
-INSERT INTO inventory (name, amount)
+INSERT INTO inventory (id,name, amount)
 VALUES
-  ('Elixir', 50),
-  ('Potion', 100);
+  ('mock-id-1','Elixir', 100),
+  ('mock-id-2','Potion', 100);

@@ -1,2 +1,2 @@
-DELETE FROM inventory WHERE name = 'Elixir';
-DELETE FROM inventory WHERE name = 'Potion';
+DELETE FROM inventory WHERE id = 'mock-id-1';
+DELETE FROM inventory WHERE id = 'mock-id-2';

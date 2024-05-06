@@ -10,3 +10,8 @@ up:
 
 down:
 	migrate -source file://./ -database $(DATABASE_URL) down $(STEP)
+force:
+	migrate -source file://./ -database $(DATABASE_URL) force $(STEP)
+
+create-migrate:
+	 migrate create -ext sql -dir ./ -seq ${NAME}
