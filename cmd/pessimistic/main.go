@@ -16,7 +16,6 @@ import (
 )
 
 func main() {
-	fmt.Println("----------------------")
 	appConfig := config.NewAppConfig()
 	db := postgres.NewPostgres(postgres.PostgresConfig{
 		DbConnectionStr: appConfig.DbConnectionStr,
@@ -54,8 +53,6 @@ func main() {
 		delay = delayNum
 	}
 	performUpdate(ctx, db, targetID, -1, delay)
-
-	fmt.Println("----------------------")
 }
 
 // delay is in seconds
